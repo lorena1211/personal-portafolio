@@ -42,9 +42,46 @@
                         ones by acquiring new experiences.</p>
 
                         <div class="tab-titles">
-                            <p class="tab-links active-link">Skills</p>
-                            <p class="tab-links">Experience</p>
-                            <p class="tab-links">Education</p>
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents">
+                            <ul>
+                                <li><span>CSS (Angular)</span><br>Intermediate knowledge in CSS and in tools web development (Angular)</li>
+                                <li><span>Suite Adobe</span><br>Basic knowledge in editing programs</li>
+                                <li><span>Java and Python</span><br>Intermediate knowledge</li>
+                                <li><span>SQL</span><br>Relational Database management</li>
+                                <li><span>Impeccable responsibility and initiative</span></li>
+                                <li><span>Excellent disposition for work under pressure and equipment.</span></li>
+                                <li><span>Ease of adaptation and acquire new knowledge</span></li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>CSS (Angular)</span><br>Intermediate knowledge in CSS and in tools web development (Angular)</li>
+                                <li><span>Suite Adobe</span><br>Basic knowledge in editing programs</li>
+                                <li><span>Java and Python</span><br>Intermediate knowledge</li>
+                                <li><span>SQL</span><br>Relational Database management</li>
+                                <li><span>Impeccable responsibility and initiative</span></li>
+                                <li><span>Excellent disposition for work under pressure and equipment.</span></li>
+                                <li><span>Ease of adaptation and acquire new knowledge</span></li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2022 - Current</span><br>Waitress, Cash management</li>
+                                <li><span>2022</span><br>Visual Basic Developer</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2018 - Current</span><br>Systems and Computing Engineering at the University of Caldas</li>
+                                <li><span>2010 - 2017</span><br>Primary school and High school</li>
+                                <li><span>2017</span><br>HTML Fundamentals Course at SENA</li>
+                                <li><span>2017</span><br>Design web pages with HTML and javascript Course at SENA</li>
+                                <li><span>2020</span><br>Designing web pages with Bootstrap 4 Course at Coursera</li>
+                            </ul>
                         </div>
                 </div>
 
@@ -52,6 +89,21 @@
 
         </div>
     </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
 
 </body>
 </html>
