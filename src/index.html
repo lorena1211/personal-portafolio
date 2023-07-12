@@ -12,7 +12,7 @@
     <div id="header">
         <div class="container">
             <nav>
-                <img src="../images/logo.jpg" alt="logo">
+                <img src="../src/images/logo.jpg" alt="logo">
                 <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -34,7 +34,7 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="../Images/Imagen4.jpg" >
+                    <img src="../src/Images/Imagen4.jpg" >
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
@@ -130,37 +130,37 @@
             <h1 class="sub-title">Some tools I've worked with...</h1>
             <div class="tool-list">
                 <div class="tool">
-                    <img src="../Images/Bootstrap.png" >
+                    <img src="../src/Images/Bootstrap.png" >
                     <div class="layer">
                         <h3>Bootstrap</h3>
                     </div>
                 </div>
                 <div class="tool">
-                    <img src="../Images/JS.jpeg" >
+                    <img src="../src/Images/JS.jpeg" >
                     <div class="layer">
                         <h3>Javascript</h3>
                     </div>
                 </div>
                 <div class="tool">
-                    <img src="../Images/jaca.png" >
+                    <img src="../src/Images/jaca.png" >
                     <div class="layer">
                         <h3>Java</h3>
                     </div>
                 </div>
                 <div class="tool">
-                    <img src="../Images/nodejs.png" >
+                    <img src="../src/Images/nodejs.png" >
                     <div class="layer">
                         <h3>Node JS</h3>
                     </div>
                 </div>
                 <div class="tool">
-                    <img src="../Images/python.jpeg" >
+                    <img src="../src/Images/python.jpeg" >
                     <div class="layer">
                         <h3>Python</h3>
                     </div>
                 </div>
                 <div class="tool">
-                    <img src="../Images/VB.jpeg" >
+                    <img src="../src/Images/VB.jpeg" >
                     <div class="layer">
                         <h3>Visual Basic</h3>
                     </div>
@@ -203,7 +203,7 @@
     <script src="index.js"></script>
     <!----<script src="envio.js"></script>-->
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbwCqOZ1r63dJ4kT-stRXHgEU7LT-fYfbiy7xFweUdJJ8-nwrIgcjPwbJVm_rn80ORkH/exec'
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxMJhP9wbiRaNBoFV2-z4JabJOba1ImW14cUmMVIXxjqcqEKiQik4AOiMK6Q4VnYfrkDg/exec'
         const form = document.forms['submit-to-google-sheet']
         const msg = document.getElementById("msg")
 
@@ -211,15 +211,15 @@
           e.preventDefault()
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
             .then(response => {
-                msg.innerHTML = "Message sent successfully"
+                msg.innerHTML= "Message sent successfully"
                 setTimeout(function(){
-                    msg.innerHTML = ""
-                }, 5000)
+                    msg.innerHTML= ""
+                },5000)
                 form.reset()
-            })
+            })            
             .catch(error => console.error('Error!', error.message))
         })
-      </script>
+    </script>
 
 </body>
 </html>
