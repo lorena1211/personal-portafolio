@@ -261,12 +261,12 @@ nav ul li a:hover::after{
 
 /*---------------contact-------------*/
 .contact-left{
-    flex-basis: 35%;
+    flex-basis: 35%;   
 }
 
-.contact-right{
+/*.contact-right{
     flex-basis: 60%;
-}
+}*/
 
 .contact-left p{
     margin-top: 30px;
@@ -310,9 +310,9 @@ nav ul li a:hover::after{
     background: #C978B1;
 }
 
-.contact-right form{
+/*.contact-right form{
     width: 100%;
-}
+}*/
 
 form input, form textarea{
     width: 100%;
